@@ -161,7 +161,7 @@ body{
     background-color:rgb(48,176,240);
     border:none;
     height:10%;
-    top:20%;
+    top:10%;
     transition:0.3s all;
     color:white;
     font-size:25px;
@@ -176,7 +176,7 @@ body{
 }
 #SearchIcon{
     position:absolute;
-    top:21%;
+    top:11%;
     left:62%;
 }
 #Results{
@@ -191,7 +191,7 @@ body{
     border-top:none;
     */
     border:4px solid rgb(48,176,240);
-    top:34%;
+    top:24%;
     color:rgb(48,176,240);
     width:100px;
     height:40px;
