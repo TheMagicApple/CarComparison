@@ -14,6 +14,21 @@ const Criteria = {
 
 function sort(property) {
 	// Sort data
+    if(property=="Model"){
+        document.getElementById("SortName").classList.add("selected");
+        document.getElementById("SortPrice").classList.remove("selected");
+        document.getElementById("SortRange").classList.remove("selected");
+    }
+    if(property=="Price"){
+        document.getElementById("SortPrice").classList.add("selected");
+        document.getElementById("SortName").classList.remove("selected");
+        document.getElementById("SortRange").classList.remove("selected");
+    }
+    if(property=="Range"){
+        document.getElementById("SortRange").classList.add("selected");
+        document.getElementById("SortPrice").classList.remove("selected");
+        document.getElementById("SortName").classList.remove("selected");
+    }
 	for (var i = 0; i < carData.length - 1; i++) {
 		for (var j = 0; j < carData.length - i - 1; j++) {
 			var data1 = carData[j];

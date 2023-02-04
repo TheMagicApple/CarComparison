@@ -155,8 +155,8 @@ body{
 }
 
 #SearchBar{
-    width:20%;
-    left:30%;
+    width:30%;
+    left:35%;
     border-radius:15px;
     background-color:rgb(48,176,240);
     border:none;
@@ -174,28 +174,44 @@ body{
     border:none;
     outline:none; 
 }
-#Sort{
-    
-    background-color:rgb(48, 176, 240);
-   /* border:5px solid rgb(48,176,240);;*/
-   border:none;
-   color:white;
-    font-family: 'Lato', sans-serif;
-    width:20%;
-    text-align:center;
-    height:10%;
-    font-size:20px;
+#SearchIcon{
     position:absolute;
-    left:55%;
-    top:20%;
-    border-radius:15px;
-}
-option{
-   padding:20px;
+    top:21%;
+    left:62%;
 }
 #Results{
     position:absolute;
     top:35%;
+}
+.sort{
+    /*
+    border-bottom:5px solid rgb(48,176,240);
+    border-right:none;
+    border-left:none;
+    border-top:none;
+    */
+    border:4px solid rgb(48,176,240);
+    top:34%;
+    color:rgb(48,176,240);
+    width:100px;
+    height:40px;
+    font-size:20px;
+    border-radius:3px;
+    transition:0.3s all;
+}
+#SortName{
+    left:36%;
+}
+#SortPrice{
+    left:47%;
+}
+#SortRange{
+    left:58%;
+}
+.selected{
+    color:white;
+    background-color:rgb(48,176,240);
+    transform:scale(1.1);
 }
 
 

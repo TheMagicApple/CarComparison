@@ -9,12 +9,13 @@
   </head>
   <body>
     <input type="text" class="exists" id="SearchBar">
+    <img src="image.png" width="50px" height="50px" id="SearchIcon">
     <button onclick="search()">Search</button>
     <!--<button onclick="">Sort by name</button>
     <button onclick="">Sort by price</button>-->    
-    <button onclick="sort('Model')" clas="exists sort" id="SortName">Name</button>
-    <button onclick="sort('Price')" class="exists sort" id="SortPrice">Price</button>
-    <button onclick="sort('Range')" class="exists sort" id="SortRange">Range</button>
+    <button onclick="sort('Model')" class="exists sort" id="SortName"><b>Name</b></button>
+    <button onclick="sort('Price')" class="exists sort" id="SortPrice"><b>Price</b></button>
+    <button onclick="sort('Range')" class="exists sort" id="SortRange"><b>Range</b></button>
     <!--
     <select id="Sort" onChange="sort(this.options[this.selectedIndex].value)">
       <option value="Model">Sort by model</option>
@@ -25,7 +26,7 @@
 	  <option value="0to60">Sort by 0-60</option>
 	  <option value="MaxSpeed">Sort by speed</option>
     </select>
--->
+-->             
    
     <table id="Results">
 	<script type="text/javascript" src="data.json"></script>
