@@ -154,6 +154,120 @@ body{
     border-radius:10px;
 }
 
+#SearchBar{
+    width:20%;
+    left:30%;
+    border-radius:15px;
+    background-color:rgb(48,176,240);
+    border:none;
+    height:10%;
+    top:20%;
+    transition:0.3s all;
+    color:white;
+    font-size:25px;
+    font-family: 'Lato', sans-serif;
+    text-align:left;
+    padding-left:20px;
+}
+#SearchBar:focus{
+    transform:scale(1.1);
+    border:none;
+    outline:none; 
+}
+#Sort{
+    
+    background-color:rgb(48, 176, 240);
+   /* border:5px solid rgb(48,176,240);;*/
+   border:none;
+   color:white;
+    font-family: 'Lato', sans-serif;
+    width:20%;
+    text-align:center;
+    height:10%;
+    font-size:20px;
+    position:absolute;
+    left:55%;
+    top:20%;
+    border-radius:15px;
+}
+option{
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 :root {
 
