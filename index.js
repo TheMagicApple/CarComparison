@@ -53,7 +53,7 @@ function sort(property) {
 		var model = row.insertCell(0);
 		model.innerHTML = carProfile[Criteria.Model];
 		var price = row.insertCell(1);
-		price.innerHTML = carProfile[Criteria.Price];
+		price.innerHTML = "$" + carProfile[Criteria.Price];
 		var drive = row.insertCell(2);
 		drive.innerHTML = carProfile[Criteria.Drive];
 		var capacity = row.insertCell(3);
