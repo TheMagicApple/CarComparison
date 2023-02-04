@@ -13,6 +13,8 @@ const Criteria = {
 
 
 function sort(property) {
+	console.log(property);
+	
 	for (i = 0; i < carData.length - 1; i++) {
 		for (j = 0; j < carData.length - i - 1; j++) {
 			data1 = carData[j];
