@@ -98,11 +98,11 @@ function addAllResults() {
         name.classList.add("carName");
         car.appendChild(name);
         var price=document.createElement('div');
-        price.innerHTML="$"+carProfile[Criteria.Price];
+        price.innerHTML="<b>$"+carProfile[Criteria.Price]+"</b>";
         price.classList.add("carPrice");
         car.appendChild(price);
         var range=document.createElement('div');
-        range.innerHTML=carProfile[Criteria.Range]+" miles";
+        range.innerHTML="<b>"+carProfile[Criteria.Range]+" miles</b>";
         range.classList.add("carRange");
         car.appendChild(range);
         document.querySelector('ul').appendChild(car);
