@@ -79,7 +79,7 @@ def main():
     soup = get_soup()
     data = get_data(soup)
     with open("data.json", "w") as f:
-        json.dump(data, f, indent=4)
+        json.dump(data, f)
 
 
 if (__name__ == "__main__"):
