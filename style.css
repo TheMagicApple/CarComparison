@@ -191,7 +191,11 @@ body{
     border-radius:15px;
 }
 option{
-   
+   padding:20px;
+}
+#Results{
+    position:absolute;
+    top:35%;
 }
 
 
