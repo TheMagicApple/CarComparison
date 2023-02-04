@@ -68,9 +68,7 @@ function updateResults() {
 
 
 function main() {
-	console.log(carData);
-	sort(Criteria.Drive);
-	console.log(carData);
+	sort(Criteria.Model);
 }
 
 
