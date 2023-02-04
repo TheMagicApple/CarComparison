@@ -181,7 +181,9 @@ body{
 }
 #Results{
     position:absolute;
-    top:35%;
+    top:33%;
+    left:28%;
+    width:40%;
 }
 .sort{
     /*
@@ -213,8 +215,38 @@ body{
     background-color:rgb(48,176,240);
     transform:scale(1.1);
 }
+
 ul{
     list-style:none;
+   
+    
+}
+.carItem{
+    width:100%;
+    background-color:white;
+    margin:20px 0;
+    border-radius:10px;
+    height:100px;
+    /*border:2px solid rgb(48,176,240);*/
+   
+}
+.carImg{
+    width:170px;
+    height:100px;
+    position:absolute;
+    
+}
+.carName{
+    position:relative;
+    left:35%;
+    top:10%;
+    font-size:20px;
+}
+.carPrice{
+
+}
+.carRange{
+
 }
 
 

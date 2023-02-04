@@ -88,12 +88,13 @@ function addAllResults() {
 	for (var i = 0; i < carData.length; i++) {
 		var carProfile = carData[i];
         var car = document.createElement('li');
+        car.classList.add("carItem");
         var img=document.createElement('img');
-        img.src=carProfile[Criteria.Model]+".png";
+        img.src="/images/"+carProfile[Criteria.Model]+".png";
         img.classList.add("carImg");
         car.appendChild(img);
         var name=document.createElement('div');
-        name.innerHTML=carProfile[Criteria.Model];
+        name.innerHTML="<b>"+carProfile[Criteria.Model]+"</b>";
         name.classList.add("carName");
         car.appendChild(name);
         var price=document.createElement('div');
