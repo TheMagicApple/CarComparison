@@ -35,6 +35,8 @@ def get_data(soup):
         battery_data = raw_battery_data[i]
 
         model = price_data[0]
+        model = model[5:]
+        model = model.replace("\"", "")
         price = price_data[4]
         price = price.replace("*", "")
         price = price.replace("$", "")
@@ -79,7 +81,7 @@ def main():
     soup = get_soup()
     data = get_data(soup)
     with open("data.json", "w") as f:
-        json.dump(data, f, indent=4)
+        json.dump(data, f)
 
 
 if (__name__ == "__main__"):
