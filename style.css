@@ -133,6 +133,7 @@ body{
     height:200px;
     left:15%;
     top:15%;
+    border-radius:10px;
 }
 .Header2{
     font-size:30px;
@@ -150,6 +151,7 @@ body{
     height:200px;
     left:55%;
     top:15%;
+    border-radius:10px;
 }
 
 
@@ -352,7 +354,7 @@ body{
   .sidebar li a:hover {
     background-color: var(--primary-color);
   }
-  .sidebar li a:hover .icon,
+  
   .sidebar li a:hover .text {
     color: var(--sidebar-color);
   }
