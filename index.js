@@ -12,23 +12,33 @@ const Criteria = {
 }
 
 
+function search() {
+	setTableHeader();
+	
+	// Set data
+	var str = document.getElementById("SearchBar").value;
+	str = str.toLowerCase();
+	var table = document.getElementById("Results");
+	for (var i = 0; i < carData.length; i++) {
+		var carProfile = carData[i];
+		var modelStr = carProfile[Criteria.Model];
+		modelStr = modelStr.toLowerCase();
+
+		if (modelStr.includes(str)) {
+			var row = table.insertRow();
+			var model = row.insertCell(0);
+			model.innerHTML = carProfile[Criteria.Model];
+			var price = row.insertCell(1);
+			price.innerHTML = "$" + carProfile[Criteria.Price];
+			var range = row.insertCell(2);
+			range.innerHTML = carProfile[Criteria.Range] != -1 ? carProfile[Criteria.Range] : "Unknown";
+		}
+	}
+}
+
+
 function sort(property) {
 	// Sort data
-    if(property=="Model"){
-        document.getElementById("SortName").classList.add("selected");
-        document.getElementById("SortPrice").classList.remove("selected");
-        document.getElementById("SortRange").classList.remove("selected");
-    }
-    if(property=="Price"){
-        document.getElementById("SortPrice").classList.add("selected");
-        document.getElementById("SortName").classList.remove("selected");
-        document.getElementById("SortRange").classList.remove("selected");
-    }
-    if(property=="Range"){
-        document.getElementById("SortRange").classList.add("selected");
-        document.getElementById("SortPrice").classList.remove("selected");
-        document.getElementById("SortName").classList.remove("selected");
-    }
 	for (var i = 0; i < carData.length - 1; i++) {
 		for (var j = 0; j < carData.length - i - 1; j++) {
 			var data1 = carData[j];
@@ -49,25 +59,14 @@ function sort(property) {
 		}
 	}
 
-	updateResults()
+	setTableHeader();
+	addAllResults()
 }
 
 
-
-function updateResults() {
-	// Set Header
-	var table = document.getElementById("Results");
-	table.innerHTML = ""; // Clear table
-	var header = table.createTHead();
-	var headerRow = header.insertRow(0);
-	var modelTag = headerRow.insertCell(0);
-	modelTag.innerHTML = "Model";
-	var priceTag = headerRow.insertCell(1);
-	priceTag.innerHTML = "Expected Price";
-	var rangeTag = headerRow.insertCell(2);
-	rangeTag.innerHTML = "Range (mi)";
-
+function addAllResults() {
 	// Set data
+	var table = document.getElementById("Results");
 	for (var i = 0; i < carData.length; i++) {
 		var carProfile = carData[i];
 
@@ -79,6 +78,21 @@ function updateResults() {
 		var range = row.insertCell(2);
 		range.innerHTML = carProfile[Criteria.Range] != -1 ? carProfile[Criteria.Range] : "Unknown";
 	}
+}
+
+
+function setTableHeader() {
+	// Set Header
+	var table = document.getElementById("Results");
+	table.innerHTML = ""; // Clear table
+	var header = table.createTHead();
+	var headerRow = header.insertRow(0);
+	var modelTag = headerRow.insertCell(0);
+	modelTag.innerHTML = "Model";
+	var priceTag = headerRow.insertCell(1);
+	priceTag.innerHTML = "Expected Price";
+	var rangeTag = headerRow.insertCell(2);
+	rangeTag.innerHTML = "Range (mi)";
 }
 
 
