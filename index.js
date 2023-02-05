@@ -41,9 +41,10 @@ function search() {
            // name.href="";
             name.classList.add("carName");
             car.appendChild(name);
-            var view=document.createElement('button');
+            var view=document.createElement('a');
             view.innerHTML="<b>View</b>";
             view.classList.add("carView");
+            view.href="view.html";
             car.appendChild(view);
             var price=document.createElement('div');
             price.innerHTML="<b>$"+carProfile[Criteria.Price]+"</b>";

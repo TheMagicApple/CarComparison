@@ -238,6 +238,7 @@ ul{
     height:100px;
     position:absolute;
     left:50px;
+    object-fit:cover;
     
 }
 .carName{
@@ -288,6 +289,11 @@ ul{
     align-items:center;
     font-size:20px;
     border:none;
+    text-decoration:none;
+    transition:0.3s all;
+}
+.carView:hover{
+    transform:scale(1.1);
 }
 .carRange{
     background-color:rgb(48,176,240);
