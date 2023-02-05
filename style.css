@@ -380,6 +380,10 @@ ul{
     font-size:50px;
     left:90%;
     top:3%;
+    transition:0.2s all;
+}
+#ViewX:hover{
+    font-size:60px;
 }
 .invis{
     display:none;
