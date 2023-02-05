@@ -51,7 +51,12 @@ function search() {
             price.classList.add("carPrice");
             car.appendChild(price);
             var range=document.createElement('div');
-            range.innerHTML="<b>"+carProfile[Criteria.Range]+" miles</b>";
+            if(carProfile[Criteria.Range]==-1){
+                range.innerHTML="<b>Unknown</b>";
+            }else{
+                range.innerHTML="<b>"+carProfile[Criteria.Range]+" miles</b>";
+            }
+           
             range.classList.add("carRange");
             car.appendChild(range);
             document.querySelector('ul').appendChild(car);
