@@ -15,7 +15,15 @@ document.getElementById("SearchBar").addEventListener('keyup', function (e) {
         search();
     }
 });
-
+function hideCar(){
+    document.getElementById("View").classList.add("invis");
+}
+function viewCar(car){
+    
+    // alert("CALL");
+    document.getElementById("View").classList.remove("invis");
+    document.getElementById("ViewName").innerHTML=car["Model"];
+}
 function search() {
 	setTableHeader();
 	
@@ -41,8 +49,16 @@ function search() {
            // name.href="";
             name.classList.add("carName");
             car.appendChild(name);
-            var view=document.createElement('a');
+            var view=document.createElement('button');
             view.innerHTML="<b>View</b>";
+            view.onclick=function(){
+                viewCar(carProfile);
+            }
+            /*
+            view.addEventListener("click", function(){
+                viewCar(carProfile);
+            });
+            */
             view.classList.add("carView");
             view.href="view.html";
             car.appendChild(view);

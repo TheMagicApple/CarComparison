@@ -318,6 +318,73 @@ ul{
     top:15%;
 
 }
+#View{
+    position:absolute;
+    width:50%;
+    background-color:rgb(240, 54, 48);
+    height:60%;
+    left:25%;   
+    top:20%;
+    border-radius:100px 0px 100px 100px;
+    
+}
+#ViewName{
+    width:100%;
+    font-size:30px;
+    top:5%;
+    color:white;
+}
+#ViewPrice{
+    width:50%;
+    font-size:30px;
+    top:25%;
+    color:white;
+}
+#ViewRange{
+    width:50%;
+    font-size:30px;
+    top:25%;
+    left:50%;
+    color:white;
+}
+#ViewDrive{
+    width:50%;
+    font-size:30px;
+    top:50%;
+    color:white;
+}
+#ViewCapacity{
+    width:50%;
+    font-size:30px;
+    top:50%;
+    left:50%;
+    color:white;
+}
+#ViewZeroToSixty{
+    width:50%;
+    font-size:30px;
+    top:75%;
+    color:white;
+}
+#ViewMaxSpeed{
+    width:50%;
+    font-size:30px;
+    top:75%;
+    left:50%;
+    color:white;
+}
+#ViewX{
+    background:transparent;
+    color:white;
+    border:none;
+    font-size:50px;
+    left:90%;
+    top:3%;
+}
+.invis{
+    display:none;
+}
+
 
 
 
