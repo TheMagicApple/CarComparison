@@ -10,7 +10,11 @@ const Criteria = {
 	ZeroToSixty: "0to60",
 	MaxSpeed: "MaxSpeed"
 }
-
+document.getElementById("SearchBar").addEventListener('keyup', function (e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+        search();
+    }
+});
 
 function search() {
 	setTableHeader();
@@ -25,7 +29,28 @@ function search() {
 		modelStr = modelStr.toLowerCase();
 
 		if (modelStr.includes(str)) {
-			var row = table.insertRow();
+            var car = document.createElement('li');
+            car.classList.add("carItem");
+            var img=document.createElement('img');
+            img.src="/images/"+carProfile[Criteria.Model]+".png";
+            img.classList.add("carImg");
+            car.appendChild(img);
+            var name=document.createElement('div');
+            name.innerHTML="<b>"+carProfile[Criteria.Model]+"</b>";
+            name.classList.add("carName");
+            car.appendChild(name);
+            var price=document.createElement('div');
+            price.innerHTML="<b>$"+carProfile[Criteria.Price]+"</b>";
+            price.classList.add("carPrice");
+            car.appendChild(price);
+            var range=document.createElement('div');
+            range.innerHTML="<b>"+carProfile[Criteria.Range]+" miles</b>";
+            range.classList.add("carRange");
+            car.appendChild(range);
+            document.querySelector('ul').appendChild(car);
+
+            /*
+            var row = table.insertRow();
             var img=row.insertCell(0);
             img.src=carProfile[Criteria.Model]+".png";
             console.log(img.src);
@@ -35,8 +60,14 @@ function search() {
 			price.innerHTML = "$" + carProfile[Criteria.Price];
 			var range = row.insertCell(3);
 			range.innerHTML = carProfile[Criteria.Range] != -1 ? carProfile[Criteria.Range] : "Unknown";
+            */
 		}
 	}
+    /*
+    document.getElementById("SortName").classList.add("selected");
+    document.getElementById("SortPrice").classList.remove("selected");
+    document.getElementById("SortRange").classList.remove("selected");
+    */
 }
 
 
