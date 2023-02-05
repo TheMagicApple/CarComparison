@@ -31,14 +31,20 @@ function search() {
 		if (modelStr.includes(str)) {
             var car = document.createElement('li');
             car.classList.add("carItem");
+            
             var img=document.createElement('img');
             img.src="./images/"+carProfile[Criteria.Model]+".webp";
             img.classList.add("carImg");
             car.appendChild(img);
             var name=document.createElement('div');
             name.innerHTML="<b>"+carProfile[Criteria.Model]+"</b>";
+           // name.href="";
             name.classList.add("carName");
             car.appendChild(name);
+            var view=document.createElement('button');
+            view.innerHTML="<b>View</b>";
+            view.classList.add("carView");
+            car.appendChild(view);
             var price=document.createElement('div');
             price.innerHTML="<b>$"+carProfile[Criteria.Price]+"</b>";
             price.classList.add("carPrice");
@@ -108,8 +114,9 @@ function sort(property) {
 		}
 	}
 
-	setTableHeader();
-	addAllResults()
+	//setTableHeader();
+    search();
+	//addAllResults()
 }
 
 

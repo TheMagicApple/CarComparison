@@ -243,7 +243,7 @@ ul{
 .carName{
     position:relative;
     left:34%;
-    top:40%;
+    top:15%;
     width:220px;
     /*display:flex;
     justify-content:center;
@@ -254,7 +254,9 @@ ul{
     font-size:20px;
     white-space: nowrap;
     overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;  
+  color:black;
+  text-decoration:none;
   
    /* border:1px solid black;*/
 }
@@ -264,7 +266,7 @@ ul{
     position:relative;
     height:50px;
     border-radius:0px 20px 0px 0px;
-    top:-25%;
+    top:-62%;
     color:white;
     left:80%;
     display:flex;
@@ -272,13 +274,28 @@ ul{
     align-items:center;
     font-size:23px;
 }
+.carView{
+    background-color:rgb(240, 54, 48);
+    width:100px;
+    position:relative;
+    height:38px;
+    border-radius:20px 20px 20px 20px;
+    top:25%;
+    left:48%;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    border:none;
+}
 .carRange{
     background-color:rgb(48,176,240);
     width:100px;
     position:relative;
     height:50px;
     border-radius:0px 0px 20px 0px;
-    top:-25%;
+    top:-62%;
     left:80%;
     color:white;
     display:flex;
@@ -777,7 +794,7 @@ ul{
 
     --body-color: #e3e3e3;
     --sidebar-color: #fff;
-    --primary-color: #5caafe;
+    --primary-color: rgb(48,176,240);
     --primary-color-light: #f6f5ff;
     --toggle-color: #ddd;
     --text-color: #707070;
