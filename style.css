@@ -388,6 +388,16 @@ ul{
 .invis{
     display:none;
 }
+#BackButton{
+    color:rgb(48, 176, 240);
+    width:140px;
+    height:50px;
+    border:5px solid rgb(48, 176, 240);
+    border-radius:20px;
+    font-size:30px;
+    left:5%;
+    top:5%;
+}
 
 
 
