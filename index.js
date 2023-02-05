@@ -22,7 +22,13 @@ function viewCar(car){
     
     // alert("CALL");
     document.getElementById("View").classList.remove("invis");
-    document.getElementById("ViewName").innerHTML=car["Model"];
+    document.getElementById("ViewName").innerHTML="<b>"+car["Model"]+"</b>";
+    document.getElementById("ViewPrice").innerHTML="<b>Price: $"+car["Price"]+"</b>";
+    document.getElementById("ViewRange").innerHTML="<b>Range: "+car["Range"]+" miles</b>";
+    document.getElementById("ViewDrive").innerHTML="<b>Drive: "+car["Drive"]+"</b>";
+    document.getElementById("ViewCapacity").innerHTML="<b>Battery: "+car["Capacity"]+" kWh</b>";
+    document.getElementById("ViewZeroToSixty").innerHTML="<b>0 to 60: "+car["0to60"]+"s</b>";
+    document.getElementById("ViewMaxSpeed").innerHTML="<b>Max Speed: "+car["MaxSpeed"]+" mph</b>";
 }
 function search() {
 	setTableHeader();
@@ -51,9 +57,14 @@ function search() {
             car.appendChild(name);
             var view=document.createElement('button');
             view.innerHTML="<b>View</b>";
+            /*
             view.onclick=function(){
                 viewCar(carProfile);
             }
+            */
+            view.onclick=(function(carProfile) {return function() {
+                viewCar(carProfile);
+            };})(carProfile);
             /*
             view.addEventListener("click", function(){
                 viewCar(carProfile);

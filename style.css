@@ -319,7 +319,7 @@ ul{
 
 }
 #View{
-    position:absolute;
+    position:fixed;
     width:50%;
     background-color:rgb(240, 54, 48);
     height:60%;
