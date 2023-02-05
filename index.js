@@ -32,7 +32,7 @@ function search() {
             var car = document.createElement('li');
             car.classList.add("carItem");
             var img=document.createElement('img');
-            img.src="/images/"+carProfile[Criteria.Model]+".png";
+            img.src="./images/"+carProfile[Criteria.Model]+".png";
             img.classList.add("carImg");
             car.appendChild(img);
             var name=document.createElement('div');
@@ -121,7 +121,7 @@ function addAllResults() {
         var car = document.createElement('li');
         car.classList.add("carItem");
         var img=document.createElement('img');
-        img.src="/images/"+carProfile[Criteria.Model]+".png";
+        img.src="./images/"+carProfile[Criteria.Model]+".png";
         img.classList.add("carImg");
         car.appendChild(img);
         var name=document.createElement('div');
